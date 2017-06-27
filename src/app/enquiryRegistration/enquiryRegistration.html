@@ -1,0 +1,58 @@
+<div class="container">
+    <div>
+        <acme-navbar active-class="activeenquiry"></acme-navbar>
+    </div>
+    <h1>Enquiry Registration</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" ng-model="registration.name" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="courses">Courses</label>
+        <select ng-model="registration.courses" name="courses" id="courses" class="form-control" multiple="multiple">
+          <option>MVC</option>
+          <option>Angular 1</option>
+          <option>Angular 2</option>
+          <option>Dotnet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="contactNo">Contact No</label>
+        <input type="number" ng-model="contactNo" class="form-control" id="contactNo" name="registration.contactNo">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Id</label>
+        <input type="email" ng-model="registration.email" class="form-control" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="enquiryDate">Enquiry Date</label>
+        <input type="date" ng-model="registration.enquiryDate" class="form-control" id="enquiryDate" name="enquiryDate">
+      </div>
+      <div class="form-group">
+        <label for="qualification">Qualification</label>
+        <input type="text" ng-model="registration.qualification" class="form-control" id="qualification" name="qualification">
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience</label>
+        <input type="text" ng-model="registration.experience" class="form-control" id="experience" name="experience">
+      </div>
+      <div class="form-group">
+        <label for="courses">Status</label>
+        <select ng-model="registration.status" name="status" id="status" class="form-control">
+          <option>Followup</option>
+          <option>Reminder</option>
+          <option>Declined</option>
+          <option>Student</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <input type="text" ng-model="registration.comments" class="form-control" id="comments" name="comments">
+      </div>
+      <button type="submit" ng-if="!this.lsService.editFlag" ng-click="submitFunction()" class="btn btn-success">Submit</button>
+      <br><br>
+      <!--<pre>{{users | json}}</pre>-->
+
+    </form>
+</div>

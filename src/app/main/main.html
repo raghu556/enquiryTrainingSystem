@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div>
+    <acme-navbar active-class='activeHome'></acme-navbar>
+  </div>
+
+  <div ng-if="users == null">No Data Present</div>
+
+  <ul>
+    <li ng-repeat="user in users">
+      {{user.name}}
+      {{user.courses}}
+      {{user.contactNo}}
+      {{user.email}}
+      {{user.enquiryDate}}
+      {{user.qualification}}
+      {{user.experience}}
+      {{user.status}}
+      {{user.comments}}
+      </li>
+  </ul>
+</div>
