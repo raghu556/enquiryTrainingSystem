@@ -1,22 +1,25 @@
-<div class="container">
 
+<div class="container">
   <div>
     <acme-navbar active-class='activeHome'></acme-navbar>
   </div>
-
-  <div ng-if="users == null">No Data Present</div>
-
-  <ul>
-    <li ng-repeat="user in users">
-      {{user.name}}
-      {{user.courses}}
-      {{user.contactNo}}
-      {{user.email}}
-      {{user.enquiryDate}}
-      {{user.qualification}}
-      {{user.experience}}
-      {{user.status}}
-      {{user.comments}}
-      </li>
-  </ul>
+  <div class="row">
+      <div class="col-md-8">
+        <label>Graph's</label>
+          <div id="hcharts-container"></div>
+        </canvas>
+      </div>
+      <div class="col-md-4">
+        <label>Registration Users</label>
+        <div ng-if="users == null">No Data Present</div>
+        <table ng-if="users !== null" class="table">
+          <tr ng-repeat="user in users">
+              <td>{{user.name}}</td>
+              <td>{{user.contactNo}}</td>
+              <td>{{user.enquiryDate}}</td>
+              <td>{{user.status}}</td>
+          </tr>
+        </table>
+      </div>
+  </div>
 </div>
